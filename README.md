@@ -5,7 +5,10 @@
 ```
 
 ## 環境構築
-ここに手順を記載
+```
+1.gitをクローン
+git clone git@github.com:kuri6-kara/miya-kadai1.git
+```
 
 ## ER図
 ![ER図](ER.drawio.png)
