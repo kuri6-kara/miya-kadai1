@@ -12,7 +12,7 @@
 
 <body>
     <div class="thanks__content">
-        <div class="thanks__heading">
+        <div class="thanks__center">
             <h2>お問い合わせありがとうございました</h2>
         </div>
         <div class="form__button">
