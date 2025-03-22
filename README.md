@@ -1,13 +1,13 @@
 ## アプリケーション名
 ```
-ここにアプリの名前を記載
-ここにアプリの名前を記載
+お問合せフォーム
 ```
 
 ## 環境構築
 ```
-1.gitをクローン
-git clone git@github.com:kuri6-kara/miya-kadai1.git
+Dockerビルド
+　1.git clone git@github.com:kuri6-kara/miya-kadai1.git
+　2.docker-compose up -d --build
 ```
 
 ## ER図
