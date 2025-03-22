@@ -10,5 +10,12 @@ Dockerビルド
 　2.docker-compose up -d --build
 ```
 
+##　使用技術
+```
+・PHP 8.4.1
+・Laravel 8.83.8
+・mysql 8.0.26
+```
+
 ## ER図
 ![ER図](ER.drawio.png)
