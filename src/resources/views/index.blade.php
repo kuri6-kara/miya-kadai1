@@ -78,32 +78,72 @@
                         <span class="form__label--required">※</span>
                     </div>
                     <div class="form__group-content">
-                        <div class="flex">
-                            <div class="form__input--text">
-                                <input type="tel_first" name="tel_first" placeholder="080" />
-                                &nbsp;-&nbsp;
-                                <input type="tel_first" name="tel_first" placeholder="1234" />
-                                &nbsp;-&nbsp;
-                                <input type="tel_first" name="tel_first" placeholder="5678" />
-                            </div>
+                        <div class="form__input--text">
+                            <input type="tel_first" name="tel_first" placeholder="080" />
+                            &nbsp;-&nbsp;
+                            <input type="tel_first" name="tel_first" placeholder="1234" />
+                            &nbsp;-&nbsp;
+                            <input type="tel_first" name="tel_first" placeholder="5678" />
                         </div>
-                        <div class="form__error">
-                            <!--バリデーション機能を実装したら記述します。-->
-                        </div>
+                    </div>
+                    <div class="form__error">
+                        <!--バリデーション機能を実装したら記述します。-->
+                    </div>
+                </div>
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">住所</span>
+                        <span class="form__label--required">※</span>
+                    </div>
+                </div>
+                <div class="form__group-content">
+                    <div class="form__input--text">
+                        <input type="address" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" />
+                    </div>
+                    <div class="form__error">
+                        <!--バリデーション機能を実装したら記述します。-->
+                    </div>
+                </div>
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">建物名</span>
+                    </div>
+                </div>
+                <div class="form__group-content">
+                    <div class="form__input--text">
+                        <input type="building_name" name="building_name" placeholder="例:千駄ヶ谷マンション101" />
+                    </div>
+                </div>
+                <div class="form__group">
+                    <div class="form__group-title">
+                        <span class="form__label--item">お問い合わせの種類</span>
+                        <span class="form__label--required">※</span>
+                    </div>
+                </div>
+                <div class="form__group-content">
+                    <div class="form__input--text">
+                        <input type="address" name="address" placeholder="選択してください" />
+                    </div>
+                    <div class="form__error">
+                        <!--バリデーション機能を実装したら記述します。-->
                     </div>
                 </div>
                 <div class="form__group">
                     <div class="form__group-title">
                         <span class="form__label--item">お問い合わせ内容</span>
+                        <span class="form__label--required">※</span>
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--textarea">
-                            <textarea name="content" placeholder="資料をいただきたいです"></textarea>
+                            <textarea name="content" placeholder="お問い合わせ内容をご記載ください"></textarea>
                         </div>
+                    </div>
+                    <div class="form__error">
+                        <!--バリデーション機能を実装したら記述します。-->
                     </div>
                 </div>
                 <div class="form__button">
-                    <button class="form__button-submit" type="submit">送信</button>
+                    <button class="form__button-submit" type="submit">確認画面</button>
                 </div>
             </form>
         </div>
