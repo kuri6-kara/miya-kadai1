@@ -79,7 +79,15 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--text">
-                            <input type="tel" name="tel" placeholder="09012345678" />
+                            <input type="tel_first" name="tel_first" placeholder="090" />
+                            <div class="form__input--hyphen">
+                                -
+                            </div>
+                            <input type="tel_first" name="tel_first" placeholder="1234" />
+                            <div class="form__input--hyphen">
+                                -
+                            </div>
+                            <input type="tel_first" name="tel_first" placeholder="5678" />
                         </div>
                         <div class="form__error">
                             <!--バリデーション機能を実装したら記述します。-->
