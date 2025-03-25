@@ -16,9 +16,7 @@
             <h2>お問い合わせありがとうございました</h2>
         </div>
         <div class="form__button">
-            <a class="form__button-submit" href="/">
-                HOME
-            <a>
+            <button type="button" onclick="location.href='{{ route('/') }}' ">HOME</button>
         </div>
     </div>
 </body>
