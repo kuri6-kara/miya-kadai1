@@ -112,7 +112,7 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="building_name" name="building_name" placeholder="例:千駄ヶ谷マンション101" />
+                        <input type="building" name="building" placeholder="例:千駄ヶ谷マンション101" />
                     </div>
                 </div>
                 <div class="form__group">
@@ -123,7 +123,7 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="address" name="address" placeholder="選択してください" />
+                        <input type="content" name="content" placeholder="選択してください" />
                     </div>
                     <div class="form__error">
                         <!--バリデーション機能を実装したら記述します。-->
@@ -136,7 +136,7 @@
                     </div>
                     <div class="form__group-content">
                         <div class="form__input--textarea">
-                            <textarea name="content" placeholder="お問い合わせ内容をご記載ください"></textarea>
+                            <textarea name="detail" placeholder="お問い合わせ内容をご記載ください"></textarea>
                         </div>
                     </div>
                     <div class="form__error">
