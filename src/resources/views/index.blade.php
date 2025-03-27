@@ -35,11 +35,18 @@
                         <div class="form__input--text">
                             <input type="text" name="family-name" placeholder="例:山田" />
                         </div>
+                        <div class="form__error">
+                            @error('first_name')
+                            {{ $message }}
+                            @enderror
+                        </div>
                         <div class="form__input--text">
                             <input type="text" name="first-name" placeholder="例:太郎" />
                         </div>
                         <div class="form__error">
-                            <!--バリデーション機能を実装したら記述します。-->
+                            @error('last_name')
+                            {{ $message }}
+                            @enderror
                         </div>
                     </div>
                 </div>
@@ -55,7 +62,11 @@
                             <input type="radio" name="gender" value="その他"> その他
                         </div>
                         <div class="form__error">
-                            <!--バリデーション機能を実装したら記述します。-->
+                            <div class="form__error">
+                                @error('gender')
+                                {{ $message }}
+                                @enderror
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -69,7 +80,11 @@
                             <input type="email" name="email" placeholder="例:test@example.com" />
                         </div>
                         <div class="form__error">
-                            <!--バリデーション機能を実装したら記述します。-->
+                            <div class="email">
+                                @error('first_name')
+                                {{ $message }}
+                                @enderror
+                            </div>
                         </div>
                     </div>
                 </div>
@@ -88,7 +103,11 @@
                         </div>
                     </div>
                     <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                        <div class="form__error">
+                            @error('tell')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                 </div>
                 <div class="form__group">
@@ -102,7 +121,11 @@
                         <input type="address" name="address" placeholder="例:東京都渋谷区千駄ヶ谷1-2-3" />
                     </div>
                     <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                        <div class="form__error">
+                            @error('address')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                 </div>
                 <div class="form__group">
@@ -126,7 +149,11 @@
                         <input type="content" name="content" placeholder="選択してください" />
                     </div>
                     <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                        <div class="form__error">
+                            @error('content')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                 </div>
                 <div class="form__group">
@@ -140,7 +167,11 @@
                         </div>
                     </div>
                     <div class="form__error">
-                        <!--バリデーション機能を実装したら記述します。-->
+                        <div class="form__error">
+                            @error('detail')
+                            {{ $message }}
+                            @enderror
+                        </div>
                     </div>
                 </div>
                 <div class="form__button">
