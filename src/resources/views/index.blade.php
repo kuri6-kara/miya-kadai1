@@ -27,7 +27,7 @@
                 </div>
                 <div class="form__group-content">
                     <div class="form__input--text">
-                        <input type="text" name="first_name" placeholder="例:山田" value="{{ old('first_name') }}" />
+                        <input type="text" name="last_name" placeholder="例:山田" value="{{ old('last_name') }}" />
                     </div>
                     <div class="form__error">
                         @error('first_name')
@@ -35,7 +35,7 @@
                         @enderror
                     </div>
                     <div class="form__input--text">
-                        <input type="text" name="last_name" placeholder="例:太郎" value="{{ old('last_name') }}" />
+                        <input type="text" name="first_name" placeholder="例:太郎" value="{{ old('first_name') }}" />
                     </div>
                     <div class="form__error">
                         @error('last_name')
