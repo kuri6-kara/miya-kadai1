@@ -17,6 +17,6 @@ class CategoryController extends Controller
     public function confirm(CategoryRequest $request)
     {
         $contact = $request->only(['category_id', 'content']);
-        return view('confirm', ['contact' => $contact]);
+        return view('confirm', compact('categories'));
     }
 }

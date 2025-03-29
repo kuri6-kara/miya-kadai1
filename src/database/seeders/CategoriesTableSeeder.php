@@ -33,10 +33,5 @@ class CategoriesTableSeeder extends Seeder
         $param = [
             'content' => 'その他'
         ];
-        // DB::table('contacts')->insert(
-        //     [
-        //         'category_id' => '任意のuser_id',
-        //         'contact' => $contact,
-        //     ]);
     }
 }
