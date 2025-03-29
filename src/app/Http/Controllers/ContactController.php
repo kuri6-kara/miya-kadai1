@@ -13,6 +13,7 @@ class ContactController extends Controller
     }
     public function confirm(ContactRequest $request)
     {
+        // $contact->category()->associate($request->input('category_id'));
         $contact = $request->only(['last_name', 'first_name','gender', 'email', 'tel', 'address', 'building', 'detail']);
         return view('confirm', compact('contact'));
     }
