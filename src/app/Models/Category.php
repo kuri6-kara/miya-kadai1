@@ -11,8 +11,8 @@ class Category extends Model
 
     protected $fillable = ['content'];
 
-    public function contacts()
-    {
-        return $this->hasMany(Contact::class);
-    }
+    // public function contacts()
+    // {
+    //     return $this->hasMany(Contact::class);
+    // }
 }

@@ -18,8 +18,8 @@ use App\Http\Controllers\AuthController;
 
 Route::get('/', [ContactController::class, 'index']);
 Route::get('/', [CategoryController::class, 'index']);
-Route::post('/contact/confirm', [ContactController::class, 'confirm']);
-Route::post('/contact/confirm', [CategoryController::class, 'confirm']);
+Route::post('confirm', [ContactController::class, 'confirm']);
+Route::post('/confirm', [CategoryController::class, 'confirm']);
 Route::post('/thanks', [ContactController::class, 'store']);
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [AuthController::class, 'index']);

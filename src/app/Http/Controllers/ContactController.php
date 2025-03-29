@@ -3,7 +3,9 @@
 namespace App\Http\Controllers;
 
 use App\Http\Requests\ContactRequest;
+use App\Models\Category;
 use App\Models\Contact;
+use Illuminate\Http\Request;
 
 class ContactController extends Controller
 {
@@ -13,13 +15,14 @@ class ContactController extends Controller
     }
     public function confirm(ContactRequest $request)
     {
-        // $contact->category()->associate($request->input('category_id'));
-        $contact = $request->only(['last_name', 'first_name','gender', 'email', 'tel', 'address', 'building', 'detail']);
-        return view('confirm', compact('contact'));
+        $contact = $request->only(['category_id', 'last_name', 'first_name','gender', 'email', 'tel', 'address', 'building', 'detail']);
+        $contacts = Contact::with(['category'])->get();
+        $categories = Category::all();
+        return view('confirm', compact('contacts', 'categories'));
     }
     public function store(ContactRequest $request)
     {
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building','detail']);
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
         Contact::create($contact);
         return view('thanks');
     }
