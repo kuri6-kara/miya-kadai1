@@ -140,11 +140,11 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <!-- <input type="text" name="content" placeholder="選択してください" value="{{ old('content') }}" /> -->
-                    <!-- <select class="create-form__item-select" name="category_id"> -->
-                    <select class="create-form__item-select">
+                    <select class="create-form__item-select" name="category_id">
                         <option value="">選択してください</option>
-                        <option value="{{ old('content') }}"></option>
+                        @foreach ($categories as $category)
+                        <option value="{{ $category['id'] }}">{{ $category['content'] }}</option>
+                        @endforeach
                     </select>
                 </div>
                 <div class="form__error">
