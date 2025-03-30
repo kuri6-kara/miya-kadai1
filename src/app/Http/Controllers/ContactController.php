@@ -19,7 +19,7 @@ class ContactController extends Controller
         // $contacts = Contact::with(['category'])->get();
         // $categories = Category::all();
 
-        return view('confirm', compact('contacts', 'categories'));
+        return view('confirm', compact('contacts'));
     }
 
     public function store(ContactRequest $request)
