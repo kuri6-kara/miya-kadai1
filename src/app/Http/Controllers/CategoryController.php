@@ -19,4 +19,10 @@ class CategoryController extends Controller
         $contact = $request->only(['category_id', 'content']);
         return view('confirm', compact('categories'));
     }
+
+    public function store()
+    {
+        $categories = Category::all();
+        return view('admin', compact('categories'));
+    }
 }

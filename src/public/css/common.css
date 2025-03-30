@@ -6,13 +6,14 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
-    /* margin: 0; */
+    margin: 0 auto;
     padding: 20px 15px;
     max-width: 1512px;
 }
 
 .header__logo {
     color: #8b7969;
+    text-decoration: none;
     font-family: Inika;
     font-weight: 400;
     font-size: 40px;
