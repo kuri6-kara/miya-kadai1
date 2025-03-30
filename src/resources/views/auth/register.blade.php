@@ -4,23 +4,15 @@
 <link rel="stylesheet" href="{{ asset('css/confirm.css') }}" />
 @endsection
 
-@section('content')
-<header class="header">
-    <div class="header__inner">
-        <a class="header__logo" href="/">
-            FashionablyLate
-        </a>
-        <nav>
-            <ul class="header-nav">
-                <li class="header-nav__item">
-                    <a class="header-nav__link" href="/login">login</a>
-                </li>
-            </ul>
-        </nav>
-    </div>
-</header>
+@section('nav')
+<ul class="header-nav">
+    <li class="header-nav__item">
+        <a class="header-nav__link" href="/login">login</a>
+    </li>
+</ul>
+@endsection
 
-<main>
+@section('content')
     <div class="register-form__content">
         <div class="register-form__heading">
             <h2>Register</h2>
@@ -77,5 +69,4 @@
             </div>
         </form>
     </div>
-</main>
 @endsection

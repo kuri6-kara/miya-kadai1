@@ -5,15 +5,6 @@
 @endsection
 
 @section('content')
-<header class="header">
-    <div class="header__inner">
-        <a class="header__logo" href="/">
-            FashionablyLate
-        </a>
-    </div>
-</header>
-
-<main>
     <div class="confirm__content">
         <div class="confirm__heading">
             <h2>Confirm</h2>
@@ -83,5 +74,4 @@
             </div>
         </form>
     </div>
-</main>
 @endsection

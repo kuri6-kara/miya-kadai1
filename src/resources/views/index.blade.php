@@ -5,15 +5,6 @@
 @endsection
 
 @section('content')
-<header class="header">
-    <div class="header__inner">
-        <a class="header__logo" href="/">
-            FashionablyLate
-        </a>
-    </div>
-</header>
-
-<main>
     <div class="contact-form__content">
         <div class="contact-form__heading">
             <h2>Contact</h2>
@@ -177,5 +168,4 @@
             </div>
         </form>
     </div>
-</main>
 @endsection
