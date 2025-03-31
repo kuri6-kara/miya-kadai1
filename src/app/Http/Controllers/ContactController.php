@@ -16,15 +16,15 @@ class ContactController extends Controller
     public function confirm(ContactRequest $request)
     {
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
-        $contacts = Contact::with(['category_id,content'])->get();
-        // $categories = Category::all();
+        $contacts = Contact::with(['category'])->get();
+        $categories = Category::all();
 
-        return view('confirm', compact('contacts'));
+        return view('confirm', compact('contacts', 'categories'));
     }
 
     public function store(ContactRequest $request)
     {
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
+        $contact = $request->only(['category_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
         Contact::create($contact);
 
         return view('thanks');
