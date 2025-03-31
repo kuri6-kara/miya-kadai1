@@ -2,7 +2,6 @@
 
 namespace Database\Seeders;
 
-use App\Models\Contact;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder
@@ -15,6 +14,6 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         $this->call(CategoriesTableSeeder::class);
-        // Contact::factory(35)->create();
+        // $this->call(ContactsTableSeeder::class);
     }
 }
