@@ -24,7 +24,7 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
-        $contact = $request->only(['category_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
+        $contact = $request->only(['category_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail', 'category_id']);
         Contact::create($contact);
         return view('thanks');
     }
