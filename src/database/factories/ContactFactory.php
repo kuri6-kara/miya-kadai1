@@ -2,7 +2,7 @@
 
 namespace Database\Factories;
 
-use App\Models\Contact;
+use App\Models\Category;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ContactFactory extends Factory
@@ -14,7 +14,11 @@ class ContactFactory extends Factory
      */
     public function definition()
     {
+        $categoryIds = Category::pluck('id')->toArray();
+
         return [
+            'category_id' => $this->faker->randomElement($categoryIds),
+
             'last_name' => $this->faker->lastName,
             'first_name' => $this->faker->firstName,
             'gender' => $this->faker->randomElement(['男性', '女性', 'その他']),
