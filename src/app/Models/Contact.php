@@ -11,6 +11,7 @@ class Contact extends Model
 
     protected $fillable = [
         'category_id',
+        'item_id',
         'last_name',
         'first_name',
         'gender',
@@ -24,5 +25,6 @@ class Contact extends Model
     public function category()
     {
         return $this->belongsTo(Category::class);
+        return $this->belongsTo(Item::class);
     }
 }

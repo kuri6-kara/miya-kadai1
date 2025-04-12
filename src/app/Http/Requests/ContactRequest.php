@@ -44,7 +44,7 @@ class ContactRequest extends FormRequest
             'email.required' => 'メールアドレスを入力してください',
             'email.email' => 'メールアドレスはメール形式で入力してください',
             'tel.required' => '電話番号を入力してください',
-            'tel.digits:5' => '電話番号は5桁までの数字で入力してください',
+            'tel.numeric' => '電話番号は5桁までの数字で入力してください',
             'address.required' => '住所を入力してください',
             'detail.required' => 'お問い合せ内容を入力してください',
             'detail.max120' => 'お問合せ内容は120文字以内で入力してください',
