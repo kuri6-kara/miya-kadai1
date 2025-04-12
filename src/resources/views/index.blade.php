@@ -147,6 +147,19 @@
         </div>
         <div class="form__group">
             <div class="form__group-title">
+                <span class="form__label--item">お問い合わせ商品</span>
+            </div>
+        </div>
+        <div class="form__group-content-2">
+            <select name="item_id">
+                <option disabled selected>選択してください</option>
+                @foreach($items as $item)
+                <option value="{{ $item->id }}">{{ $item->content }}</option>
+                @endforeach
+            </select>
+        </div>
+        <div class="form__group">
+            <div class="form__group-title">
                 <span class="form__label--item">お問い合わせ内容</span>
                 <span class="form__label--required">※</span>
             </div>

@@ -11,8 +11,9 @@ class ContactController extends Controller
 {
     public function index()
     {
+        $items = Item::all();
         $categories = Category::all();
-        return view('index', compact('categories'));
+        return view('index', compact('categories', 'items'));
     }
 
     public function confirm(ContactRequest $request)
