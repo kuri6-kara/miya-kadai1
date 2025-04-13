@@ -184,6 +184,19 @@
                 </div>
             </div>
         </div>
+        <div class="form__group">
+            <div class="form__group-title">
+                <span class="form__label--item">どこで知りましたか？</span>
+                <span class="form__label--required">※</span>
+            </div>
+            <div class="form__group-content">
+                @foreach($channels as $channel)
+                <label>
+                <input type="checkbox" name="channel_ids[]" value="{{ $channel->id }}" />
+                </label>
+                @endforeach
+            </div>
+        </div>
         <div class="form__button">
             <button class="form__button-submit" type="submit">確認画面</button>
         </div>

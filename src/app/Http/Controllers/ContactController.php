@@ -6,6 +6,7 @@ use App\Http\Requests\ContactRequest;
 use App\Models\Category;
 use App\Models\Item;
 use App\Models\Contact;
+use App\Models\Channel;
 use Illuminate\Http\Request;
 
 class ContactController extends Controller
@@ -14,7 +15,8 @@ class ContactController extends Controller
     {
         $items = Item::all();
         $categories = Category::all();
-        return view('index', compact('categories', 'items'));
+        $channels = Channel::all();
+        return view('index', compact('categories', 'items', 'channels'));
     }
 
     public function confirm(ContactRequest $request)
@@ -22,12 +24,14 @@ class ContactController extends Controller
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
         $category = Category::find($request->category_id);
         $item = Item::find($request->item_id);
-        return view('confirm', compact('contacts', 'category', 'item'));
+        $channel = Channel::find($request->$channel_id);
+        return view('confirm', compact('contacts', 'category', 'items', 'channels'));
     }
 
     public function store(Request $request)
     {
-        $contact = $request->only(['category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
+        $contact = Contact::created(
+        $request->only(['category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']));
         Contact::create($contact);
         return view('thanks');
     }
