@@ -24,7 +24,7 @@ class ContactController extends Controller
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
         $category = Category::find($request->category_id);
         $item = Item::find($request->item_id);
-        $channel = Channel::find($request->$channel_id);
+        $channel = Channel::find($request->$channel_ids);
         return view('confirm', compact('contacts', 'category', 'items', 'channels'));
     }
 
@@ -32,6 +32,7 @@ class ContactController extends Controller
     {
         $contact = Contact::created(
         $request->only(['category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']));
+
         Contact::create($contact);
         return view('thanks');
     }
