@@ -22,7 +22,7 @@ class ContactController extends Controller
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
         $category = Category::find($request->category_id);
         $item = Item::find($request->item_id);
-        return view('confirm', compact('contact', 'category', 'item'));
+        return view('confirm', compact('contacts', 'category', 'item'));
     }
 
     public function store(Request $request)

@@ -58,6 +58,13 @@
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
+                    <th class="confirm-table__header">お問い合わせ商品</th>
+                    <td class="confirm-table__text">
+                        <input type="text" name="item_content" value="{{ $item->content}}" readonly />
+                        <input type="hidden" name="item_id" value="{{ $item->id }}" />
+                    </td>
+                </tr>
+                <tr class="confirm-table__row">
                     <th class="confirm-table__header">お問い合わせ内容</th>
                     <td class="confirm-table__text">
                         <input type="text" name="detail" value="{{ $contact['detail'] }}" readonly />
