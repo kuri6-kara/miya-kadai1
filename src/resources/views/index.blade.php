@@ -5,6 +5,7 @@
 @endsection
 
 @section('content')
+@php dump($errors->all()) @endphp
 <div class="contact-form__content">
     <div class="contact-form__heading">
         <h2>Contact</h2>
@@ -80,16 +81,22 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--text">
-                    <input type="tel" name="tel" placeholder="080" value="{{ old('tel') }}" />
+                    <input type="tel" name="tel1" placeholder="080" value="{{ old('tel1') }}" />
                     &nbsp;-&nbsp;
-                    <input type="tel" name="tel" placeholder="1234" value="{{ old('tel') }}" />
+                    <input type="tel" name="tel2" placeholder="1234" value="{{ old('tel2') }}" />
                     &nbsp;-&nbsp;
-                    <input type="tel" name="tel" placeholder="5678" value="{{ old('tel') }}" />
+                    <input type="tel" name="tel3" placeholder="5678" value="{{ old('tel3') }}" />
                 </div>
             </div>
             <div class="form__error">
                 <div class="form__error">
-                    @error('tell')
+                    @error('tel1')
+                    {{ $message }}
+                    @enderror
+                    @error('tel2')
+                    {{ $message }}
+                    @enderror
+                    @error('tel3')
                     {{ $message }}
                     @enderror
                 </div>
@@ -132,6 +139,7 @@
         <div class="form__group-content">
             <div class="form__input--text">
                 <select class="create-form__item-select" name="category_id">
+                    <option value="">選択してください</option>
                     @foreach ($categories as $category)
                     <option value="{{ $category['id']}}">{{ $category['content'] }}</option>
                     @endforeach
@@ -139,7 +147,7 @@
             </div>
             <div class="form__error">
                 <div class="form__error">
-                    @error('content')
+                    @error('category_id')
                     {{ $message }}
                     @enderror
                 </div>
@@ -161,7 +169,7 @@
         </div>
         <div class="form__error">
             <div class="form__error">
-                @error('detail')
+                @error('item_id')
                 {{ $message }}
                 @enderror
             </div>
@@ -192,7 +200,7 @@
             <div class="form__group-content">
                 @foreach($channels as $channel)
                 <label>
-                <input type="checkbox" name="channel_ids[]" value="{{ $channel->id }}" />
+                    <input type="checkbox" name="channel_ids[]" value="{{ $channel->id }}" />
                 </label>
                 @endforeach
             </div>
