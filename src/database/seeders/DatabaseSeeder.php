@@ -3,6 +3,8 @@
 namespace Database\Seeders;
 
 use App\Models\Category;
+use App\Models\Item;
+use App\Models\Channel;
 use Illuminate\Database\Seeder;
 
 class DatabaseSeeder extends Seeder

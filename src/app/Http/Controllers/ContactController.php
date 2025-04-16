@@ -22,15 +22,16 @@ class ContactController extends Controller
     public function confirm(ContactRequest $request)
     {
         $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
+        $contact = $request->all();
         $category = Category::find($request->category_id);
         $item = Item::find($request->item_id);
-        $channel = Channel::find($request->$channel_ids);
-        return view('confirm', compact('contact', 'category', 'item', 'channel'));
+        $channels = Channel::find($request->$channel_ids);
+        return view('confirm', compact('contacts', 'category', 'item', 'channels'));
     }
 
     public function store(Request $request)
     {
-        $contact = Contact::created(
+        $contact = Contact::create(
         $request->only(['category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']));
 
         $contact->channels()->sync($request->channel_ids);

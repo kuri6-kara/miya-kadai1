@@ -195,12 +195,12 @@
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">どこで知りましたか？</span>
-                <span class="form__label--required">※</span>
             </div>
             <div class="form__group-content">
                 @foreach($channels as $channel)
                 <label>
                     <input type="checkbox" name="channel_ids[]" value="{{ $channel->id }}" />
+                    {{ $channel->content }}
                 </label>
                 @endforeach
             </div>

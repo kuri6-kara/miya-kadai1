@@ -36,6 +36,7 @@ class ContactRequest extends FormRequest
             'category_id' => ['required'],
             'item_id' => ['required'],
             'detail' => ['required', 'string', 'max:120'],
+            'channel_ids' => ['nullable'],
         ];
     }
 

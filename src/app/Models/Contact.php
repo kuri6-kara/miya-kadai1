@@ -19,7 +19,8 @@ class Contact extends Model
         'tel',
         'address',
         'building',
-        'detail'
+        'detail',
+        'channel_ids'
     ];
 
     public function category()
@@ -34,6 +35,6 @@ class Contact extends Model
 
     public function channels()
     {
-        return $this->belongsToMany(Channel::class, 'channel_content');
+        return $this->belongsToMany(Channel::class, 'channel_contact');
     }
 }
