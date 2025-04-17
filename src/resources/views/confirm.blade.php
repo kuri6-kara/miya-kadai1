@@ -35,7 +35,9 @@
                 <tr class="confirm-table__row">
                     <th class="confirm-table__header">電話番号</th>
                     <td class="confirm-table__text">
-                        <input type="tel" name="tel" value="{{ $contact['tel'] }}" readonly />
+                        <input type="tel" name="tel1" value="{{ $contact['tel1'] }}" readonly />
+                        <input type="tel" name="tel2" value="{{ $contact['tel2'] }}" readonly />
+                        <input type="tel" name="tel3" value="{{ $contact['tel3'] }}" readonly />
                     </td>
                 </tr>
                 <tr class="confirm-table__row">
@@ -76,6 +78,7 @@
                         @foreach($channels as $channel)
                         <input type="text" name="channel_contents[]" value="{{ $channel->content }}" readonly />
                         <input type="hidden" name="channel_ids[]" value="{{ $channel->id }}" />
+                        @endforeach
                     </td>
                 </tr>
             </table>

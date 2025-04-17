@@ -27,11 +27,13 @@ class ContactFactory extends Factory
             'gender' => $this->faker->randomElement(['男性', '女性', 'その他']),
             'email' => $this->faker->safeEmail,
             'tel' => $this->faker->phoneNumber,
+            // 'tel2' => $this->faker->phoneNumber,
+            // 'tel3' => $this->faker->phoneNumber,
             'address' => $this->faker->prefecture,
             'address' => $this->faker->streetAddress,
             'building' => $this->faker->secondaryAddress,
             'detail' => $this->faker->realText(120),
-            'channel_ids' => $this->faker->randomElement($channelIds),
+            'channel_ids' => $this->faker->numberBetween(1, 5),
         ];
     }
 }
