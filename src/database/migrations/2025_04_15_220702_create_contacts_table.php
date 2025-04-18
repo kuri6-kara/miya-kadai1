@@ -21,11 +21,10 @@ class CreateContactsTable extends Migration
             $table->string('first_name');
             $table->string('gender');
             $table->string('email');
-            $table->string('tel')->default('');
+            $table->string('tel');
             $table->string('address');
             $table->string('building')->nullable();
             $table->text('detail');
-            $table->foreignId('channel_ids')->constrained()->cascadeOnDelete();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
         });

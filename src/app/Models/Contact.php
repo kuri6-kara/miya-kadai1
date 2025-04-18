@@ -36,5 +36,6 @@ class Contact extends Model
     public function channels()
     {
         return $this->belongsToMany(Channel::class, 'channel_contact');
+        // return $this->belongsToMany(Channel::class)->withTimestamps();
     }
 }

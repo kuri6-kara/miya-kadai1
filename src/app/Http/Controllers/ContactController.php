@@ -35,7 +35,6 @@ class ContactController extends Controller
             $request->only(['category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail'])
         );
         $contact->channels()->sync($request->channel_ids);
-        Contact::create($contact);
         return view('thanks');
     }
 }

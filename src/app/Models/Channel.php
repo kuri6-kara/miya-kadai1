@@ -11,8 +11,9 @@ class Channel extends Model
 
     protected $fillable = ['content'];
 
-    public function contacts()
+    public function contact()
     {
         return $this->belongsToMany(Contact::class, 'channel_contact');
+        // return $this->belongsToMany(Contact::class)->withTimestamps();
     }
 }
