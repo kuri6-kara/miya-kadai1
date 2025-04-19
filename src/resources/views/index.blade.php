@@ -10,6 +10,10 @@
     <div class="contact-form__heading">
         <h2>Contact</h2>
     </div>
+    <form action="/confirm" method="post" enctype="multipart/form-data">
+        @csrf
+        <input type="file" name="image_file">
+    </form>
     <form class="form" action="/confirm" method="post">
         @csrf
         <div class="form__group">

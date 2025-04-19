@@ -16,6 +16,7 @@ class ContactController extends Controller
         $items = Item::all();
         $categories = Category::all();
         $channels = Channel::all();
+        $contact['image_file'] = $request->image_file->store('image', 'public');
         return view('index', compact('categories', 'items', 'channels'));
     }
 
@@ -32,7 +33,7 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $contact = Contact::create(
-            $request->only(['category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail'])
+            $request->only(['imge_file', 'category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail'])
         );
         $contact->channels()->sync($request->channel_ids);
         return view('thanks');
