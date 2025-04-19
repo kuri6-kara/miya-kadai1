@@ -4,7 +4,7 @@ namespace Database\Factories;
 
 use App\Models\Category;
 use App\Models\Item;
-use App\Models\Channel;
+// use App\Models\Channel;
 use Illuminate\Database\Eloquent\Factories\Factory;
 
 class ContactFactory extends Factory
@@ -33,7 +33,7 @@ class ContactFactory extends Factory
             'address' => $this->faker->streetAddress,
             'building' => $this->faker->secondaryAddress,
             'detail' => $this->faker->realText(120),
-            'channel_ids' => $this->faker->numberBetween(1, 5),
+            // 'channel_ids' => $this->faker->numberBetween(1, 5),
         ];
     }
 }
