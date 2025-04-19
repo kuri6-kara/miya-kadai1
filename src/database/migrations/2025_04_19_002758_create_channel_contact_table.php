@@ -15,7 +15,7 @@ class CreateChannelContactTable extends Migration
     {
         Schema::create('channel_contact', function (Blueprint $table) {
             $table->id();
-            $table->foreignId('channel_ids')->constrained()->cascadeOnDelete();
+            $table->foreignId('channel_id')->constrained()->cascadeOnDelete();
             $table->foreignId('contact_id')->constrained()->cascadeOnDelete();
             $table->timestamp('created_at')->useCurrent()->nullable();
             $table->timestamp('updated_at')->useCurrent()->nullable();
