@@ -34,7 +34,7 @@ class ContactController extends Controller
     public function store(Request $request)
     {
         $contact = Contact::create(
-            $request->only(['imge_file', 'category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail'])
+            $request->only(['image_file', 'category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail'])
         );
         $contact->channels()->sync($request->channel_ids);
         return view('thanks');

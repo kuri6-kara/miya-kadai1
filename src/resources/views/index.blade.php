@@ -5,7 +5,7 @@
 @endsection
 
 @section('content')
-@php dump($errors->all()) @endphp
+<!-- @php dump($errors->all()) @endphp -->
 <div class="contact-form__content">
     <div class="contact-form__heading">
         <h2>Contact</h2>
