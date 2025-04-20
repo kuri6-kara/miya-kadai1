@@ -16,7 +16,7 @@ class ContactController extends Controller
         $items = Item::all();
         $categories = Category::all();
         $channels = Channel::all();
-        $contact['image_file'] = $request->image_file->store('image', 'public');
+        // $contact['image_file'] = $request->image_file->store('image', 'public');
         return view('index', compact('categories', 'items', 'channels'));
     }
 
