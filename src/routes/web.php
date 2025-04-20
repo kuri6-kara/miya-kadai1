@@ -3,6 +3,7 @@
 use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\ContactController;
 use App\Models\Category;
+use App\Models\Contact;
 use App\Http\Controllers\AuthController;
 // use App\Http\Controllers\AdminController;
 
@@ -24,6 +25,8 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin', [AuthController::class, 'index']);
 });
 Route::get('/admin', function (){
-    $categories = Category::all(); return view('admin', compact('categories'));
+    $contacts = Contact::Paginate(3);
+    $categories = Category::all();
+    return view('admin', compact('contacts', 'categories'));
 });
 // Route::get('/admin/search', [AdminController::class, 'search']);
