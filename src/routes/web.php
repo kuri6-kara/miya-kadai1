@@ -25,7 +25,7 @@ Route::middleware('auth')->group(function () {
     Route::get('/admin', [AuthController::class, 'index']);
 });
 Route::get('/admin', function (){
-    $contacts = Contact::Paginate(3);
+    $contacts = Contact::with('categry')->simplePaginate(5);
     $categories = Category::all();
     return view('admin', compact('contacts', 'categories'));
 });
