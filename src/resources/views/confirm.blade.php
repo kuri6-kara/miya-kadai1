@@ -9,14 +9,10 @@
     <div class="confirm__heading">
         <h2>Confirm</h2>
     </div>
-    <img src="{{ /storage/ . $contact['$image_file'] }}" >
-    <input type="hidden" name="image_file" value="{{ &contact['image_file']}}">
+    <img src="{{ '/storage/' . $contact['image_file'] }}" >
+    <input type="hidden" name="image_file" value="{{ $contact['image_file']}}">
 </div>
-@endforeach
-</div>
-</body>
 
-</html>
 
 <form class="form" action="/thanks" method="post">
     @csrf

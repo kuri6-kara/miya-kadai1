@@ -14,8 +14,8 @@
         @csrf
         <input type="file" name="image_file">
     </form>
-    <form class="form" action="/confirm" method="post">
-        @csrf
+    <!-- <form class="form" action="/confirm" method="post">
+        @csrf -->
         <div class="form__group">
             <div class="form__group-title">
                 <span class="form__label--item">お名前</span>

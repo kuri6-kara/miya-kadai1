@@ -22,8 +22,9 @@ class ContactController extends Controller
 
     public function confirm(ContactRequest $request)
     {
-        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail']);
-        $contact = $request->all();
+        $contact = $request->only(['last_name', 'first_name', 'gender', 'email', 'tel1', 'tel2', 'tel3', 'address', 'building', 'detail', 'category_id', 'item_id', 'channel_ids']);
+        // $contact = $request->all();
+        $contact['image_file'] = $request->image_file->store('image', 'public');
         $category = Category::find($request->category_id);
         $item = Item::find($request->item_id);
         $channels = Channel::find($request->channel_ids);
