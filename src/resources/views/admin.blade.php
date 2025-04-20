@@ -45,7 +45,7 @@
                 </div>
             </div>
             <input type="submit" value="検索">
-            <input type="submit" value="リセット">
+            <input type="submit" value="リセット" name="reset">
         </form>
     </div>
     {{ $contacts->links() }}
@@ -72,7 +72,7 @@
             <td>{{$contact->email}}</td>
             <td>{{$contact->category->content}}</td>
             <td>
-                <a href=""詳細></a>
+                <a href="" 詳細></a>
             </td>
         </tr>
         @endforeach
