@@ -13,7 +13,7 @@
     <form action="/confirm" method="post" enctype="multipart/form-data">
         @csrf
         <input type="file" name="image_file">
-    </form>
+    <!-- </form> -->
     <!-- <form class="form" action="/confirm" method="post">
         @csrf -->
         <div class="form__group">

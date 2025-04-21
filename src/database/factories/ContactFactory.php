@@ -34,6 +34,7 @@ class ContactFactory extends Factory
             'building' => $this->faker->secondaryAddress,
             'detail' => $this->faker->realText(120),
             // 'channel_ids' => $this->faker->numberBetween(1, 5),
+            'image_file' => 'image/1eVI7F68jwlXLWNpZj5EaFkYR0ai8ZY6617K9Wa2.jpg',
         ];
     }
 }

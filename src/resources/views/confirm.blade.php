@@ -9,13 +9,13 @@
     <div class="confirm__heading">
         <h2>Confirm</h2>
     </div>
-    <img src="{{ '/storage/' . $contact['image_file'] }}" >
-    <input type="hidden" name="image_file" value="{{ $contact['image_file']}}">
 </div>
 
 
 <form class="form" action="/thanks" method="post">
     @csrf
+    <img src="{{ '/storage/' . $contact['image_file'] }}">
+    <input type="hidden" name="image_file" value="{{ $contact['image_file']}}">
     <div class="confirm-table">
         <table class="confirm-table__inner">
             <tr class="confirm-table__row">

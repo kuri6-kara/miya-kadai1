@@ -33,6 +33,7 @@ class ContactController extends Controller
 
     public function store(Request $request)
     {
+        // dd($request->all());
         $contact = Contact::create(
             $request->only(['image_file', 'category_id', 'item_id', 'last_name', 'first_name', 'gender', 'email', 'tel', 'address', 'building', 'detail'])
         );
