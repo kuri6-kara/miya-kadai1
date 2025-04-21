@@ -8,11 +8,18 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
+    public function index()
+    {
+        $contacts = Contact::with('category')->simplePaginate(5);
+        $categories = Category::all();
+        return view('admin', compact('contacts', 'categories'));
+    }
+
     public function search(Request $request)
     {
         if ($request->has('reset')) {
             return redirect('/admin')->withInput();
-    }
+        }
         $query = Contact::query();
 
         if (!empty($request->keyword)) {

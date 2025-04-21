@@ -22,13 +22,10 @@ use App\Http\Controllers\AuthController;
 Route::get('/', [ContactController::class, 'index']);
 Route::post('/confirm', [ContactController::class, 'confirm']);
 Route::post('/thanks', [ContactController::class, 'store']);
+// 上記は誰でも操作可能
+
 Route::middleware('auth')->group(function () {
-    Route::get('/admin', [AuthController::class, 'index']);
+    Route::get('/admin', [SearchController::class, 'index']);
+    Route::post('/search', [SearchController::class, 'search']);
 });
-Route::get('/admin', function (){
-    $contacts = Contact::with('categry')->simplePaginate(5);
-    $categories = Category::all();
-    return view('admin', compact('contacts', 'categories'));
-});
-Route::post('/search', [SearchController::class, 'search']);
-// Route::get('/admin/search', [AdminController::class, 'search']);
+
