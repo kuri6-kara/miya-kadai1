@@ -130,7 +130,11 @@
                         <input type="hidden" name="id" value="{{ $contact->id }}">
                         <input type="submit" value="削除">
                     </form>
-                        @endforeach
+                </div>
+                <a href="#" class="modal__close">×</a>
+            </div>
+        </div>
+        @endforeach
     </table>
 </div>
 @endsection
