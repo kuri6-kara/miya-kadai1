@@ -23,13 +23,16 @@
         <form action="/search" method="post">
             @csrf
             <div>
-                <input type="text" name="keyword" placeholder="名前やメールアドレスを入力してください">
+                <input type="text" name="keyword" value="{{ request('keyword')}}" placeholder="名前やメールアドレスを入力してください">
                 <div>
                     <select name="gender">
                         <option disabled selected>性別</option>
-                        <option value="">男性</option>
+                        <!-- <option value="">男性</option>
                         <option value="">女性</option>
-                        <option value="">その他</option>
+                        <option value="">その他</option> -->
+                        <option value="男性" {{ request('gender')=='男性' ? 'selected' : ''}}>男性</option>
+                        <option value="女性" {{ request('gender')=='女性' ? 'selected' : ''}}>女性</option>
+                        <option value="その他" {{ request('gender')=='その他' ? 'selected' : ''}}>その他</option>
                     </select>
                 </div>
                 <div>
