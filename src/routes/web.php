@@ -26,6 +26,7 @@ Route::post('/thanks', [ContactController::class, 'store']);
 
 Route::middleware('auth')->group(function () {
     Route::get('/admin', [SearchController::class, 'index']);
+    Route::get('/search', [SearchController::class, 'search']);
     Route::post('/search', [SearchController::class, 'search']);
 });
 
