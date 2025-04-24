@@ -80,8 +80,11 @@
             </td>
         </tr>
 
-        <div class="modal__wrapper" id="{{$contact->id}}">
-            <div class="modal__window">
+        <!-- <div class="modal__wrapper" id="{{$contact->id}}">
+            <div class="modal__window"> -->
+        <div class="modal" id="{{$contact->id}}">
+            <a href="#!" class="modal-overlay"></a>
+            <div class="modal__inner">
                 <div class="modal__content">
                     <form action="/delete" method="post">
                         @csrf
