@@ -15,7 +15,7 @@
     </li>
     @endif
 </ul>
-@endsection
+
 
 @section('content')
 <div>
