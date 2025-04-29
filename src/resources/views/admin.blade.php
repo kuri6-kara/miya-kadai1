@@ -20,13 +20,13 @@
 @section('content')
 <div>
     <h2>Admin</h2>
-    <div>
-        <form action="/search" method="post">
+    <div class="admin__inner">
+        <form class="search-form" action="/search" method="post">
             @csrf
             <div>
-                <input type="text" name="keyword" value="{{ request('keyword')}}" placeholder="名前やメールアドレスを入力してください">
-                <div>
-                    <select name="gender">
+                <input class="search-form__keyword-input" type="text" name="keyword" value="{{ request('keyword')}}" placeholder="名前やメールアドレスを入力してください">
+                <div class="search-form__gender">
+                    <select class="search-form__gender-select" name="gender">
                         <option disabled selected>性別</option>
                         <!-- <option value="">男性</option>
                         <option value="">女性</option>
@@ -39,8 +39,8 @@
                         <option value="3" @if( request('gender')==3 ) selected @endif>その他</option>
                     </select>
                 </div>
-                <div>
-                    <select name="category_id">
+                <div class="search-form__category">
+                    <select class="search-form__category-select" name="category_id">
                         <option disabled selected>お問い合わせの種類</option>
                         @foreach($categories as $category)
                         <option value="{{ $category->id }}">{{ $category->content }}</option>
