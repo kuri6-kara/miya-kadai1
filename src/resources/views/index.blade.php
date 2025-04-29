@@ -13,8 +13,8 @@
     <form action="/confirm" method="post" enctype="multipart/form-data">
         @csrf
         <input type="file" name="image_file">
-    <!-- </form> -->
-    <!-- <form class="form" action="/confirm" method="post">
+        <!-- </form> -->
+        <!-- <form class="form" action="/confirm" method="post">
         @csrf -->
         <div class="form__group">
             <div class="form__group-title">
@@ -47,9 +47,18 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--radio">
-                    <input type="radio" name="gender1" value="男性" checked value="{{ old('gender1') }}"> 男性
-                    <input type="radio" name="gender2" value="女性" value="{{ old('gender2') }}"> 女性
-                    <input type="radio" name="gender3" value="その他" value="{{ old('gender3') }}"> その他
+                    <!-- <input type="radio" name="gender1" value="男性" checked value="{{ old('gender1') }}"> 男性 -->
+                    <input type="radio" name="gender" id="male" value="1" {{
+                old('gender')==1 || old('gender')==null ? 'checked' : '' }}>
+                    <span class="contact-form__gender-text">男性</span>
+                    <!-- <input type="radio" name="gender2" value="女性" value="{{ old('gender2') }}"> 女性 -->
+                    <input type="radio" name="gender" id="female" value="2" {{
+                old('gender')==2 ? 'checked' : '' }}>
+                    <span class="contact-form__gender-text">女性</span>
+                    <!-- <input type="radio" name="gender3" value="その他" value="{{ old('gender3') }}"> その他 -->
+                    <input type="radio" name="gender" id="other" value="3" {{
+                old('gender')==3 ? 'checked' : '' }}>
+                    <span class="contact-form__gender-text">その他</span>
                 </div>
                 <div class="form__error">
                     <div class="form__error">
