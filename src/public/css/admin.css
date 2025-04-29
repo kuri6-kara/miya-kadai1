@@ -110,7 +110,7 @@ select {
 }
 
 /* エクスポートボタン */
-.export-form {
+/* .export-form {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -121,7 +121,7 @@ select {
   background-color: #E1DBD6;
   color: #8B7969;
   font-weight: 400;
-}
+} */
 
 /* テーブル */
 .admin__table {
