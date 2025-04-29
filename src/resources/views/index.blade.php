@@ -47,9 +47,9 @@
             </div>
             <div class="form__group-content">
                 <div class="form__input--radio">
-                    <input type="radio" name="gender" value="男性" checked value="{{ old('gender') }}"> 男性
-                    <input type="radio" name="gender" value="女性" value="{{ old('gender') }}"> 女性
-                    <input type="radio" name="gender" value="その他" value="{{ old('gender') }}"> その他
+                    <input type="radio" name="gender1" value="男性" checked value="{{ old('gender1') }}"> 男性
+                    <input type="radio" name="gender2" value="女性" value="{{ old('gender2') }}"> 女性
+                    <input type="radio" name="gender3" value="その他" value="{{ old('gender3') }}"> その他
                 </div>
                 <div class="form__error">
                     <div class="form__error">

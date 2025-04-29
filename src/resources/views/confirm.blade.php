@@ -28,7 +28,10 @@
             <tr class="confirm-table__row">
                 <th class="confirm-table__header">性別</th>
                 <td class="confirm-table__text">
-                    <input type="text" name="gender" value="{{ $contact['gender'] }}" readonly />
+                    <input type="text" name="gender1" value="{{ $contact['男性'] }}" readonly />
+                    <input type="text" name="gender2" value="{{ $contact['女性'] }}" readonly />
+                    <input type="text" name="gender3" value="{{ $contact['その他'] }}" readonly />
+                    <input type="hidden" name="gender" value="{{ $contact['gender1'] . $contact['gender2'] . $contact['gender3'] }}" />
                 </td>
             </tr>
             <tr class="confirm-table__row">
