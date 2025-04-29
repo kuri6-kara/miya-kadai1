@@ -18,12 +18,11 @@
 
 
 @section('content')
-<div>
-    <h2>Admin</h2>
+<div class="admin">
+    <h2 class="admin__heading content__heading">Admin</h2>
     <div class="admin__inner">
         <form class="search-form" action="/search" method="post">
             @csrf
-            <div>
                 <input class="search-form__keyword-input" type="text" name="keyword" value="{{ request('keyword')}}" placeholder="名前やメールアドレスを入力してください">
                 <div class="search-form__gender">
                     <select class="search-form__gender-select" name="gender">
@@ -47,12 +46,11 @@
                         @endforeach
                     </select>
                 </div>
-                <div>
-                    <input type="date" name="date">
+                <input class="search-form__date" type="date" name="date">
+                <div class="search-form__actions">
+                    <input class="search-form__search-btn btn" type="submit" value="検索">
+                    <input class="search-form__reset-btn btn" type="submit" value="リセット" name="reset">
                 </div>
-            </div>
-            <input type="submit" value="検索">
-            <input type="submit" value="リセット" name="reset">
         </form>
     </div>
     {{ $contacts->links() }}
