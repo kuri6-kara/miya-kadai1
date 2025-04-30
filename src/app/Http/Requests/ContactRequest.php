@@ -24,6 +24,7 @@ class ContactRequest extends FormRequest
     public function rules()
     {
         return [
+            'image_file' => ['required'],
             'last_name' => ['required', 'string', 'max:255'],
             'first_name' => ['required', 'string', 'max:255'],
             'gender' => ['required'],
@@ -43,6 +44,7 @@ class ContactRequest extends FormRequest
     public function messages()
     {
         return [
+            'image_file.required' => '画像を選択してください',
             'first_name.required' => '名を入力してください',
             'last_name.required' => '姓を入力してください',
             'gender.required' => '性別を選択してください',

@@ -30,9 +30,9 @@
                     <!-- <option value="">男性</option>
                         <option value="">女性</option>
                         <option value="">その他</option> -->
-                    <!-- <option value="男性" {{ request('gender')=='男性' ? 'selected' : ''}}>男性</option>
-                        <option value="女性" {{ request('gender')=='女性' ? 'selected' : ''}}>女性</option>
-                        <option value="その他" {{ request('gender')=='その他' ? 'selected' : ''}}>その他</option> -->
+                    <!-- <option value="男性" {{ request('gender')=='1' ? 'selected' : ''}}>男性</option>
+                        <option value="女性" {{ request('gender')=='2' ? 'selected' : ''}}>女性</option>
+                        <option value="その他" {{ request('gender')=='3' ? 'selected' : ''}}>その他</option> -->
                     <option value="1" @if( request('gender')==1 ) selected @endif>男性</option>
                     <option value="2" @if( request('gender')==2 ) selected @endif>女性</option>
                     <option value="3" @if( request('gender')==3 ) selected @endif>その他</option>

@@ -13,6 +13,11 @@
     <form action="/confirm" method="post" enctype="multipart/form-data">
         @csrf
         <input type="file" name="image_file">
+        <div class="form__error">
+            @error('image_file')
+            {{ $message }}
+            @enderror
+        </div>
         <!-- </form> -->
         <!-- <form class="form" action="/confirm" method="post">
         @csrf -->

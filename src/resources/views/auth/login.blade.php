@@ -36,9 +36,8 @@
                     @enderror
                 </div>
             </div>
-            <div class="form__button">
-                <button class="form__button-submit" type="submit">ログイン</button>
-            </div>
+            <button class="login-form__btn btn" type="submit">ログイン</button>
         </form>
     </div>
-    @endsection
+</div>
+@endsection
