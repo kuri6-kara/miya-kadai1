@@ -53,6 +53,7 @@
             </div>
         </form>
         {{ $contacts->links() }}
+        {{ $contacts->appends(request()->query())->links('vendor.pagination.semantic-ui') }}
         <table class="admin__table">
             <tr class="admin__row">
                 <th class="admin__label">お名前</th>
