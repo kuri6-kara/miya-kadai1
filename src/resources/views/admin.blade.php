@@ -52,7 +52,8 @@
                 <input class="search-form__reset-btn btn" type="submit" value="リセット" name="reset">
             </div>
         </form>
-        {{ $contacts->links() }}
+        <!-- {{ $contacts->links() }} -->
+        {{ $contacts->links('vendor.pagination.semantic-ui') }}
 
         <table class="admin__table">
             <tr class="admin__row">

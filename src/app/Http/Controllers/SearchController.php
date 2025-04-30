@@ -10,7 +10,8 @@ class SearchController extends Controller
 {
     public function index()
     {
-        $contacts = Contact::with('category')->simplePaginate(5);
+        // $contacts = Contact::with('category')->simplePaginate(5);
+        $contacts = Contact::with('category')->Paginate(5);
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
     }
@@ -41,7 +42,8 @@ class SearchController extends Controller
         }
 
         // $query->dd();
-        $contacts = $query->simplePaginate(5);
+        // $contacts = $query->simplePaginate(5);
+        $contacts = $query->Paginate(5);
         // dd($contacts);
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
