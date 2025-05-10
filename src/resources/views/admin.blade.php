@@ -46,7 +46,7 @@
                 <input class="search-form__reset-btn btn" type="submit" value="リセット" name="reset">
             </div>
         </form>
-        <div class="col-md-4 mb-4">
+        <!-- <div class="col-md-4 mb-4">
             <a class="link" href="/">
                 <div class="card">
                     <img src="{{ asset('/storage/' . $contacts->image_file) }}" alt="{{ $contact->first_name }}">
@@ -57,7 +57,7 @@
                     </div>
                 </div>
             </a>
-        </div>
+        </div> -->
 
         <!-- {{ $contacts->links() }} -->
         {{ $contacts->links('vendor.pagination.semantic-ui') }}
