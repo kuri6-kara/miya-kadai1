@@ -8,10 +8,11 @@ use Illuminate\Http\Request;
 
 class SearchController extends Controller
 {
-    public function index()
+    public function index(Request $request)
     {
         // $contacts = Contact::with('category')->simplePaginate(5);
         $contacts = Contact::with('category')->Paginate(5);
+        $contact['image_file'] = $request->file('image_file')->store('image', 'public');
         $categories = Category::all();
         return view('admin', compact('contacts', 'categories'));
     }

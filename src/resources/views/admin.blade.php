@@ -27,12 +27,6 @@
             <div class="search-form__gender">
                 <select class="search-form__gender-select" name="gender">
                     <option disabled selected>性別</option>
-                    <!-- <option value="">男性</option>
-                        <option value="">女性</option>
-                        <option value="">その他</option> -->
-                    <!-- <option value="男性" {{ request('gender')=='1' ? 'selected' : ''}}>男性</option>
-                        <option value="女性" {{ request('gender')=='2' ? 'selected' : ''}}>女性</option>
-                        <option value="その他" {{ request('gender')=='3' ? 'selected' : ''}}>その他</option> -->
                     <option value="1" @if( request('gender')==1 ) selected @endif>男性</option>
                     <option value="2" @if( request('gender')==2 ) selected @endif>女性</option>
                     <option value="3" @if( request('gender')==3 ) selected @endif>その他</option>
@@ -52,6 +46,19 @@
                 <input class="search-form__reset-btn btn" type="submit" value="リセット" name="reset">
             </div>
         </form>
+        <div class="col-md-4 mb-4">
+            <a class="link" href="/">
+                <div class="card">
+                    <img src="{{ asset('/storage/' . $contacts->image_file) }}" alt="{{ $contact->first_name }}">
+                    <input type="hidden" name="image_file" value="{{ $contact['image_file']}}">
+                    <div class="card-body">
+                        <h5 class="card-title">{{ $contact->first_name }}</h5>
+                        <p class="card-text">{{ $contact->email }} </p>
+                    </div>
+                </div>
+            </a>
+        </div>
+
         <!-- {{ $contacts->links() }} -->
         {{ $contacts->links('vendor.pagination.semantic-ui') }}
 
